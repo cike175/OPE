@@ -1,0 +1,14 @@
+{"total":12,"rows":[
+ {"className":"计算机2班","year":2016,"lingdao":"韩老师","teachers":"王东方,吕芳芳"},
+ {"className":"计算机3班","year":2016,"lingdao":"韩老师","teachers":"王东方,孙颖"},
+ {"className":"测试","year":2016,"lingdao":"赵老师","teachers":"孙颖,吕芳芳"},
+ {"className":"测试2班","year":2016,"lingdao":"赵老师","teachers":"韩正,吕芳芳"},
+ {"className":"计算机4班","year":2016,"lingdao":"韩老师","teachers":"孙建洋,李娜"},
+ {"className":"JAVA1班","year":201601,"lingdao":"韩征老师","teachers":"柳弟,吕芳芳"},
+ {"className":"测试2016","year":2016,"lingdao":"赵老师","teachers":"陈天竹,吕芳芳"},
+ {"className":"测试1","year":"2年级","lingdao":"赵老师","teachers":"王东方,韩正"},
+ {"className":"测试2","year":2016,"lingdao":"赵老师","teachers":"王东方,孙建洋"},
+ {"className":"BS班","year":20160713,"lingdao":"李老师","teachers":"赵伟伟,孙建洋"},
+ {"className":"g计算机","year":"一年级","lingdao":"王老师","teachers":"关正旭,吕芳芳"},
+ {"className":"测试3班","year":2016,"lingdao":"赵老师","teachers":"关正旭,韩正"}
+ ]}

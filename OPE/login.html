@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>login</title>
+		<link rel="icon" type="image/x-icon" href="title.PNG"/>
+		<link rel="stylesheet" type="text/css" href="./easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="./easyui/themes/icon.css">
+		
+	</head>
+	<body background="rgba(0,0,255,0.5)">
+		<div class="easyui-window" data-options="title:'请登录',
+			collapsible:false,minimizable:false,maximizable:false,closable:false,
+			resizable:false,draggable:false,shadow:true,modal:true" style="padding:20px">
+			
+			<form action="show.html" method="get" id="loginForm">
+				
+                                                                <p>用户名:<input type="text" name="userName" id="userName" value="" 
+					class="easyui-textbox" data-options="required:true,
+					iconCls:'icon-man',validType:'userName[wdf]',missingMessage:'用户名不能为空！'"/>
+				</p>
+
+				<p>密&nbsp;&nbsp;&nbsp;码:<input type="password" name="userName" id="userName" value="" 
+					class="easyui-textbox" data-options="required:true,iconCls:'icon-lock',
+					validType:'passWord[word]',missingMessage:'密码不能为空！'"/></p>
+					
+				<p style="margin-left:44px">
+					<!--这里不能用<button>  以及input type=button  ajax方式页面不会跳转-->
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok"   style="margin:0px 20px" onclick="submitForm()">提交</a>
+					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"   onclick="clearForm()">重置</a>
+				</p>
+			</form>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="./easyui/jquery.min.js"></script>
+<script type="text/javascript" src="./easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function submitForm(){
+		var flag=$('#loginForm').form('validate');
+		if(flag){
+			$('#loginForm').submit();  //这里是jquery中的submit();
+		}
+	}
+	
+	function clearForm(){
+		$('#loginForm').form('clear');
+	}
+	
+	var wdf=/^王东方$/,word=/^wang199385$/;
+	$.extend($.fn.validatebox.defaults.rules,{
+		userName:{
+			validator:function(value,param){
+				return param[0].test(value);
+			},
+		message:'用户名不存在,请重新输入'
+		}
+	});
+	
+	$.extend($.fn.validatebox.defaults.rules,{
+		passWord:{
+			validator:function(value,param){
+				return param[0].test(value);
+			},
+		message:'用户名不存在,请重新输入'
+		}
+	});
+</script>
